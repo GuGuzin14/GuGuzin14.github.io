@@ -2,17 +2,17 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.body{
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
 }
 
 .navbar {
     font-size: 20px;
-    height: 10%;
-    background-color: #333;
+    background-color: #333; /* Cor de fundo da navbar */
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para navbar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais profissional */
 }
 
 .navbar ul {
@@ -32,11 +32,18 @@ html, body {
     text-align: center;
     padding: 20px 20px;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #575757; /* Cor de fundo ao passar o mouse */
+    color: white;
+}
+
+.navbar li[selected] a {
+    background-color: #007BFF; /* Cor de fundo para o item selecionado */
+    color: white;
+    font-weight: bold; /* Negrito para o item selecionado */
 }
 
 .container {
@@ -44,32 +51,32 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    min-height: 100vh; /* Alterado de height para min-height */
+    min-height: 100vh;
     margin: auto;
-    background-color: rgb(211, 211, 211);
+    background-color: #f4f4f9;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .subcontainer {
     width: 80%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 20px;
     display: flex;
-    flex-direction: column; /* Permite que o conteúdo seja empilhado verticalmente */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma pequena sombra ao redor do subcontainer */
-    padding: 20px; /* Adiciona padding para garantir que o conteúdo não toque as bordas */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px; /* Aumenta um pouco a fonte do texto */
+    font-size: 20px;
 }
 
 .profile-image {
@@ -85,6 +92,7 @@ html, body {
 
 .about-me h2 {
     margin-top: 0;
+    color: #007BFF; /* Cor do título */
 }
 
 .about-me p {
@@ -108,6 +116,7 @@ html, body {
 
 .grid-item h3 {
     margin-top: 0;
+    color: #007BFF; /* Cor do título */
 }
 
 .grid-item a {
@@ -126,4 +135,25 @@ html, body {
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Garante que a imagem se ajuste ao tamanho definido sem distorção */
 }
